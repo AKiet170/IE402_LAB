@@ -74,6 +74,9 @@
         BT_jsondata.lines.forEach(function (data) {
           graphicsLayer.add(createGraphic(data));
         });
+        BT_jsondata.points.forEach(function (data) {
+          graphicsLayer.add(createGraphic(data));
+        });
         sc_jsondata.points.forEach(function (data) {
           graphicsLayer.add(createGraphic(data));
         });
@@ -133,10 +136,6 @@
           graphicsLayer.add(createGraphic(data));
         });
         console.log("BT_jsondata:", BT_jsondata); // Thêm trước khi sử dụng
-
-        // BT_jsondata.points.forEach(function (data) {
-        //   graphicsLayer.add(createGraphic(data));
-        // });
       });
     </script>
   </head>
