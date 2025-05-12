@@ -96,16 +96,16 @@ require([
   };
 
   // Thêm nền
-  esriRequest("./data/cuaChinh/base.json", json_options).then(
-    function (response) {
-      var graphicsLayer = new GraphicsLayer();
-      console.log(response);
-      response.data.forEach(function (data) {
-        graphicsLayer.add(createGraphic(data));
-      });
-      map.add(graphicsLayer);
-    }
-  );
+  esriRequest("./data/cuaChinh/base.json", json_options).then(function (
+    response
+  ) {
+    var graphicsLayer = new GraphicsLayer();
+    console.log(response);
+    response.data.forEach(function (data) {
+      graphicsLayer.add(createGraphic(data));
+    });
+    map.add(graphicsLayer);
+  });
 
   // Function to create GeoJSONLayer
   function createGeoJsonLayer(name, renderer) {
@@ -326,7 +326,7 @@ require([
       "cuaBac/gate",
       GLBRenderer({
         href: "./meshObject/cuaBac/cuaBac.glb",
-        heading: "507.5",
+        heading: "327.75",
       })
     )
   );
@@ -398,7 +398,7 @@ require([
       "cuaDong/gate",
       GLBRenderer({
         href: "./meshObject/cuaDong/cuaDong.glb",
-        heading: "329",
+        heading: "238.85",
       })
     )
   );
@@ -462,7 +462,7 @@ require([
       "cuaTay/gate",
       GLBRenderer({
         href: "./meshObject/cuaTay/cuaTay.glb",
-        heading: "329",
+        heading: "58.85",
       })
     )
   );
@@ -579,7 +579,7 @@ require([
     createGeoJsonLayer(
       "phanVienTuCuaBacDong-CuaBacTay/CuaSo1",
       GLBRenderer({
-        href: "./meshObject/PhanVienBacDong-BacTay/CuaSo.glb",
+        href: "./meshObject/PhanVienBacDong-BacTay/cuaSoDong.glb",
         heading: "59",
       })
     )
@@ -1064,7 +1064,7 @@ require([
     createGeoJsonLayer(
       "phanVienTuCuaBacDong-CuaBacTay/CuaSo34",
       GLBRenderer({
-        href: "./meshObject/PhanVienBacDong-BacTay/CuaSo.glb",
+        href: "./meshObject/PhanVienBacDong-BacTay/cuaSoBacT.glb",
         heading: "-32",
       })
     )
@@ -1074,7 +1074,7 @@ require([
     createGeoJsonLayer(
       "phanVienTuCuaBacDong-CuaBacTay/CuaSo35",
       GLBRenderer({
-        href: "./meshObject/PhanVienBacDong-BacTay/CuaSo.glb",
+        href: "./meshObject/PhanVienBacDong-BacTay/cuaSoBacP.glb",
         heading: "-32",
       })
     )
@@ -1204,7 +1204,7 @@ require([
     createGeoJsonLayer(
       "phanVienTuCuaBacDong-CuaBacTay/CuaSo48",
       GLBRenderer({
-        href: "./meshObject/PhanVienBacDong-BacTay/CuaSo.glb",
+        href: "./meshObject/PhanVienBacDong-BacTay/cuaSoTay.glb",
         heading: "239",
       })
     )
@@ -1589,15 +1589,16 @@ require([
       })
     )
   );
-  map.add(
-    createGeoJsonLayer(
-      "cuaSoMaiNho/mai12",
-      GLBRenderer({
-        href: "./meshObject/maiNho/cuaSoMaiNho.glb",
-        heading: "508",
-      })
-    )
-  );
+
+  // map.add(
+  //   createGeoJsonLayer(
+  //     "cuaSoMaiNho/mai12",
+  //     GLBRenderer({
+  //       href: "./meshObject/maiNho/cuaSoMaiNho.glb",
+  //       heading: "508",
+  //     })
+  //   )
+  // );
 
   //3 tuong phai HCN
   map.add(
