@@ -731,6 +731,26 @@ require([
     )
   );
 
+  //CuaSoCanhDong-Nam
+  map.add(
+    createGeoJsonLayer(
+      "chinhDong/cuaSoCanh1",
+      GLBRenderer({
+        href: "./meshObject/cuaSo/cuaSoCanh4.glb",
+        heading: "58.85",
+      })
+    )
+  );
+  map.add(
+    createGeoJsonLayer(
+      "chinhDong/cuaSoCanh2",
+      GLBRenderer({
+        href: "./meshObject/cuaSo/cuaSoCanh3.glb",
+        heading: "148",
+      })
+    )
+  );
+
   map.add(
     createGeoJsonLayer("chinhTay/maiChinhTay", blockRenderer(1.9, "#D3D3D3"))
   ); //O K' D1 S
