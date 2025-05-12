@@ -668,6 +668,38 @@ require([
     });
   });
 
+  //CuaSoTay
+  map.add(
+    createGeoJsonLayer(
+      "chinhTay/cuaSoTay",
+      GLBRenderer({
+        href: "./meshObject/cuaSo/cuaSoTay.glb",
+        heading: "238.85",
+      })
+    )
+  );
+  //CuaSoGocTay-Nam
+  map.add(
+    createGeoJsonLayer(
+      "chinhTay/cuaSoGoc",
+      GLBRenderer({
+        href: "./meshObject/cuaSo/cuaSoGoc.glb",
+        heading: "193.85",
+      })
+    )
+  );
+
+  //CuaSoDong
+  map.add(
+    createGeoJsonLayer(
+      "chinhDong/cuaSoDong",
+      GLBRenderer({
+        href: "./meshObject/cuaSo/cuaSoDong.glb",
+        heading: "58.85",
+      })
+    )
+  );
+
   map.add(
     createGeoJsonLayer("chinhTay/maiChinhTay", blockRenderer(1.9, "#D3D3D3"))
   ); //O K' D1 S
@@ -696,7 +728,7 @@ require([
             },
             symbol: GLBRenderer({
               href: "./meshObject/cuaSo/cuaSo.glb",
-              heading: "58",
+              heading: "58.85",
             }).symbol,
           });
 
@@ -1590,15 +1622,15 @@ require([
     )
   );
 
-  // map.add(
-  //   createGeoJsonLayer(
-  //     "cuaSoMaiNho/mai12",
-  //     GLBRenderer({
-  //       href: "./meshObject/maiNho/cuaSoMaiNho.glb",
-  //       heading: "508",
-  //     })
-  //   )
-  // );
+  map.add(
+    createGeoJsonLayer(
+      "cuaSoMaiNho/mai12",
+      GLBRenderer({
+        href: "./meshObject/maiNho/cuaSoMaiNho.glb",
+        heading: "508",
+      })
+    )
+  );
 
   //3 tuong phai HCN
   map.add(
